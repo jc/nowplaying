@@ -1,0 +1,40 @@
+$def with (user)
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>$user.name's Now Playing </title>
+        <link rel="stylesheet" href="/static/main.css" type="text/css" media="screen">
+    </head>
+    <body>
+    <script src='/static/jquery-1.4.2.js' type='text/javascript'></script>
+      <script charset='utf-8' src='/static/nowplaying.js' type='text/javascript'></script>
+        <div id="content">
+            <div class="changeable" id="nowPlaying">
+                <p id="currentTrack">
+                  <span id="image"></span>
+                  <span id="artist">Loading&hellip;</span>
+                  <br/>
+                  <span id="track"></span>
+                </p>
+            </div>
+            <img id="sparkline"/>      
+        </div>
+        <div>
+        <p id="currentDj">
+            <a id="currentDjLink" href="$user.url">
+              $if user.image['medium']:
+                  <img src="$user.image['medium']" id="lastfmUserImage">
+              <span id="lastFmUser">$user.name
+              $if user.real_name:
+                  ($user.real_name) 
+              </span>
+            </a>
+        </p>
+        </div>
+        <script>$$(document).ready(function() {
+          nowplaying.init("$user.name");
+          });</script>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #878787;
+    color: #fff;
+    font: normal 2.5em 'Helvetica', 'Arial', sans-serif;
+}
+input {
+    font: normal 1em 'Helvetica', 'Arial', sans-serif;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a img {
+    border: 0;
+}
+
+#content {
+    padding: 10px;
+    margin: 10px;
+}
+
+p, h2 {
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+p#currentTrack {
+    width: 100%;
+    float: left;
+}
+
+p#currentTrack span {
+    margin-left: 20px;
+}
+
+span#image img {
+    margin-left: 20px;
+    float: left;
+    height: 300px;
+    width: 300px;
+}
+
+img#sparkline {
+    position: absolute;
+    bottom: 84px;
+    z-index: 2;
+}
+
+p#currentDj {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #999;
+    clear: left;
+    margin: 0;
+    vertical-align: middle;
+    line-height: 84px;
+    border-top: 2px solid #FF8000;
+}
+p#currentDj a {
+    padding: 5px;
+}
+p#currentDj img {
+    float: left;
+    padding: 10px;
+    height: 64px;
+    width: audo;
+    vertical-align: middle;
+}
